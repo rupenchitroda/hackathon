@@ -1,24 +1,190 @@
+﻿{% load static %}
+<!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    </head>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DocOnGo</title>
+	
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="{% static 'assets/materialize/css/materialize.min.css' %}" media="screen,projection" />
+    <!-- Bootstrap Styles-->
+    <link href="{% static 'assets/css/bootstrap.css' %}" rel="stylesheet" />
+    <!-- FontAwesome Styles-->
+    <link href="{% static 'assets/css/font-awesome.css' %}" rel="stylesheet" />
+    <!-- Morris Chart Styles-->
+    <link href="{% static 'assets/js/morris/morris-0.4.3.min.css' %}" rel="stylesheet" />
+    <!-- Custom Styles-->
+    <link href="{% static 'assets/css/custom-styles.css' %}" rel="stylesheet" />
+    <!-- Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="{% static 'assets/js/Lightweight-Chart/cssCharts.css' %}"> 
+</head>
+<body>
+    <div id="wrapper">
+         <nav class="navbar navbar-default top-navbar" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand waves-effect waves-dark" href="#"><i class="large material-icons">assignment_ind</i> <strong>DocOnGo</strong></a>
 
-    <body>
-        <div class="container">
-            <div class="row justify-content-md-center pt-5">
-                <h1>DocOnGo</h1>
+		        <div id="sideNav" href="#"><i class="material-icons dp48">toc</i></div>
             </div>
-            <div class="row justify-content-md-center">
-                <h4>Doctorinator</h4>
+        </nav>
+        <!--/. NAV TOP  -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+                    <li>
+                        <a href="tab-panel.html" class="active-menu waves-effect waves-dark"><i class="fa fa-qrcode"></i> Check </a>
+                    </li>
+                    
+                    <li>
+                        <a href="table.html" class="waves-effect waves-dark"><i class="fa fa-table"></i> Doctors Panel</a>
+                    </li>
+                </ul>
             </div>
-            <div class="row justify-content-md-center pt-5">
-                <form action="#" method="POST" class="form" name="form">
-                    <div class="form-group">
-                        <textarea style="width: 100%;" class="form-control" name="str" id="str"></textarea>
+
+        </nav>
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper" >
+			<div class="header"> 
+                <h1 class="page-header">
+                    Enter Details
+                </h1>
+                <ol class="breadcrumb">
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, similique. Maxime ipsam enim adipisci cum temporibus neque </li>
+                </ol> 				
+            </div>
+		
+            <div id="page-inner"> 
+            
+            <div class="card">
+                <div class="card-content">
+                    <form class="col s12" method="get" action="#">
+                        <div class="row">
+                            <div class="input-field col s7">
+                                <input id="first_name"  placeholder="Full Name" type="text" class="validate">
+                                <!-- <label for="first_name">Full Name</label> -->
+                            </div>
+                            <div class="input-field col s5">
+                                <input id="email" placeholder="E-Mail" type="email" class="validate">
+                                <!-- <label for="email">Email</label> -->
+                            </div>
+                            
+                            <div class="input-field col s12">
+                                <textarea name="str" id="textarea1" placeholder="Enter String" class="materialize-textarea"></textarea>
+                            </div>
+
+                            <div class="input-field col s12">
+                                <button type="submit" style="width: 100%; background-color:#2196f3;" class="waves-effect waves-light btn">Enter</button>
+                            </div>
+                        </div>                        
+                    </form>
+                    <div class="clearBoth"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 col-sm-4">
+                   <div class="card blue">
+						<div class="card-content white-text">
+						  <span class="card-title">Chief Complain</span>
+						  <p>I am a very simple card. I am good at containing small bits of information.
+						  I am convenient because I require little markup to use effectively.</p>
+						</div>
+					  </div>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                   <div class="card">
+						<div class="card-content">
+						  <span class="card-title">Symptoms</span>
+						  <p>I am a very simple card. I am good at containing small bits of information.
+						  I am convenient because I require little markup to use effectively.</p>
+						</div>
+					  </div>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                        <div class="card green ">
+						<div class="card-content white-text">
+						  <span class="card-title">Duration</span>
+						  <p>I am a very simple card. I am good at containing small bits of information.
+						  I am convenient because I require little markup to use effectively.</p>
+						</div>
+					  </div>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <div class="card red darken-1">
+                    <div class="card-content white-text">
+                      <span class="card-title">Severity</span>
+                      <p>I am a very simple card. I am good at containing small bits of information.
+                      I am convenient because I require little markup to use effectively.</p>
                     </div>
-                </form>
-                <button type="submit" class="btn btn-dark">Go</button>
+                  </div>
             </div>
+            
+            <div class="col-md-4 col-sm-4">
+                <div class="card teal darken-1">
+                <div class="card-content white-text">
+                  <span class="card-title">Associated Symptom</span>
+                  <p>I am a very simple card. I am good at containing small bits of information.
+                  I am convenient because I require little markup to use effectively.</p>
+                </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-4">
+                <div class="card brown">
+                <div class="card-content white-text">
+                  <span class="card-title">Aggravating Factors</span>
+                  <p>I am a very simple card. I am good at containing small bits of information.
+                  I am convenient because I require little markup to use effectively.</p>
+                </div>
+                </div>
+            </div>
+         <!-- /. PAGE WRAPPER  -->
         </div>
-    </body>
+     <!-- /. WRAPPER  -->
+    <!-- JS Scripts-->
+    <!-- jQuery Js -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+	
+	<!-- Bootstrap Js -->
+    <script src="assets/js/bootstrap.min.js"></script>
+	
+	<script src="assets/materialize/js/materialize.min.js"></script>
+	
+    <!-- Metis Menu Js -->
+    <script src="assets/js/jquery.metisMenu.js"></script>
+    <!-- Morris Chart Js -->
+    <script src="assets/js/morris/raphael-2.1.0.min.js"></script>
+    <script src="assets/js/morris/morris.js"></script>
+	
+	
+	<script src="assets/js/easypiechart.js"></script>
+	<script src="assets/js/easypiechart-data.js"></script>
+	
+	 <script src="assets/js/Lightweight-Chart/jquery.chart.js"></script>
+	
+    <!-- Custom Js -->
+    <script src="assets/js/custom-scripts.js"></script> 
+	<script>
+	$(document).ready(function(){
+	 $('ul.tabs').tabs();
+		$('.collapsible').collapsible({
+		  accordion: false, // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+		  onOpen: function(el) { alert('Open'); }, // Callback for Collapsible open
+		  onClose: function(el) { alert('Closed'); } // Callback for Collapsible close
+		}
+	  );
+	});
+	</script>
+ 
+
+</body>
+
 </html>
