@@ -40,11 +40,11 @@
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
                     <li>
-                        <a href="tab-panel.html" class="active-menu waves-effect waves-dark"><i class="fa fa-qrcode"></i> Check </a>
+                        <a href="index" class="active-menu waves-effect waves-dark"><i class="fa fa-qrcode"></i> Check </a>
                     </li>
                     
                     <li>
-                        <a href="table.html" class="waves-effect waves-dark"><i class="fa fa-table"></i> Doctors Panel</a>
+                        <a href="table" class="waves-effect waves-dark"><i class="fa fa-table"></i> Doctors Panel</a>
                     </li>
                 </ul>
             </div>
@@ -57,7 +57,7 @@
                     Enter Details
                 </h1>
                 <ol class="breadcrumb">
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, similique. Maxime ipsam enim adipisci cum temporibus neque </li>
+                    <li>Enter details to find out Symptoms, Aggravating Factors etc.</li>
                 </ol> 				
             </div>
 		
@@ -65,14 +65,15 @@
             
             <div class="card">
                 <div class="card-content">
-                    <form class="col s12" method="get" action="#">
+                    <form class="col s12" method="POST" action="/index">
+                        {% csrf_token %}
                         <div class="row">
                             <div class="input-field col s7">
-                                <input id="first_name"  placeholder="Full Name" type="text" class="validate">
+                                <input name="name" id="first_name"  placeholder="Full Name" type="text" class="validate">
                                 <!-- <label for="first_name">Full Name</label> -->
                             </div>
                             <div class="input-field col s5">
-                                <input id="email" placeholder="E-Mail" type="email" class="validate">
+                                <input name="email" id="email" placeholder="E-Mail" type="email" class="validate">
                                 <!-- <label for="email">Email</label> -->
                             </div>
                             
@@ -89,89 +90,30 @@
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-md-4 col-sm-4">
-                   <div class="card blue">
-						<div class="card-content white-text">
-						  <span class="card-title">Chief Complain</span>
-						  <p>I am a very simple card. I am good at containing small bits of information.
-						  I am convenient because I require little markup to use effectively.</p>
-						</div>
-					  </div>
-                </div>
-                <div class="col-md-4 col-sm-4">
-                   <div class="card">
-						<div class="card-content">
-						  <span class="card-title">Symptoms</span>
-						  <p>I am a very simple card. I am good at containing small bits of information.
-						  I am convenient because I require little markup to use effectively.</p>
-						</div>
-					  </div>
-                </div>
-                <div class="col-md-4 col-sm-4">
-                        <div class="card green ">
-						<div class="card-content white-text">
-						  <span class="card-title">Duration</span>
-						  <p>I am a very simple card. I am good at containing small bits of information.
-						  I am convenient because I require little markup to use effectively.</p>
-						</div>
-					  </div>
-                </div>
-                <div class="col-md-4 col-sm-4">
-                    <div class="card red darken-1">
-                    <div class="card-content white-text">
-                      <span class="card-title">Severity</span>
-                      <p>I am a very simple card. I am good at containing small bits of information.
-                      I am convenient because I require little markup to use effectively.</p>
-                    </div>
-                  </div>
-            </div>
-            
-            <div class="col-md-4 col-sm-4">
-                <div class="card teal darken-1">
-                <div class="card-content white-text">
-                  <span class="card-title">Associated Symptom</span>
-                  <p>I am a very simple card. I am good at containing small bits of information.
-                  I am convenient because I require little markup to use effectively.</p>
-                </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 col-sm-4">
-                <div class="card brown">
-                <div class="card-content white-text">
-                  <span class="card-title">Aggravating Factors</span>
-                  <p>I am a very simple card. I am good at containing small bits of information.
-                  I am convenient because I require little markup to use effectively.</p>
-                </div>
-                </div>
-            </div>
-         <!-- /. PAGE WRAPPER  -->
-        </div>
      <!-- /. WRAPPER  -->
     <!-- JS Scripts-->
     <!-- jQuery Js -->
-    <script src="assets/js/jquery-1.10.2.js"></script>
+    <script src="{% static 'assets/js/jquery-1.10.2.js' %}"></script>
 	
 	<!-- Bootstrap Js -->
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
 	
-	<script src="assets/materialize/js/materialize.min.js"></script>
+	<script src="{% static 'assets/materialize/js/materialize.min.js' %}"></script>
 	
     <!-- Metis Menu Js -->
-    <script src="assets/js/jquery.metisMenu.js"></script>
+    <script src="{% static 'assets/js/jquery.metisMenu.js' %}"></script>
     <!-- Morris Chart Js -->
-    <script src="assets/js/morris/raphael-2.1.0.min.js"></script>
-    <script src="assets/js/morris/morris.js"></script>
+    <script src="{% static 'assets/js/morris/raphael-2.1.0.min.js' %}"></script>
+    <script src="{% static 'assets/js/morris/morris.js' %}"></script>
 	
 	
-	<script src="assets/js/easypiechart.js"></script>
-	<script src="assets/js/easypiechart-data.js"></script>
+	<script src="{% static 'assets/js/easypiechart.js' %}"></script>
+	<script src="{% static 'assets/js/easypiechart-data.js' %}"></script>
 	
-	 <script src="assets/js/Lightweight-Chart/jquery.chart.js"></script>
+	 <script src="{% static 'assets/js/Lightweight-Chart/jquery.chart.js' %}"></script>
 	
     <!-- Custom Js -->
-    <script src="assets/js/custom-scripts.js"></script> 
+    <script src="{% static 'assets/js/custom-scripts.js' %}"></script> 
 	<script>
 	$(document).ready(function(){
 	 $('ul.tabs').tabs();
@@ -183,8 +125,5 @@
 	  );
 	});
 	</script>
- 
-
 </body>
-
 </html>

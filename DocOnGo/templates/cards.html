@@ -1,4 +1,4 @@
-﻿{% load static %}
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -52,59 +52,69 @@
         </nav>
         <!-- /. NAV SIDE  -->
         <div id="page-wrapper" >
-            <div class="header"> 
-                <h1 class="page-header">
-                    Data
-                </h1>
-            </div>	
-            <div id="page-inner">    
-            <div class="row">
-                <div class="col-md-12">
-                    <!-- Advanced Tables -->
-                    <div class="card">
-                        <div class="card-content">
-                            <div class="table-responsive">
-                                <table class="table table-striped table-bordered table-hover" id="dataTables-example">
-                                    <thead>
-                                        <tr>
-                                            <th>Name</th>
-                                            <th>Story</th>
-                                            <th>Symptoms</th>
-                                            <th>Duration</th>
-                                            <th>Aggregated Factor</th>
-                                            <th>Date</th> 
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {% block content %}
-                                        {% for n,st,dr,sp,af,dt in data %}
-                                        <tr class="odd gradeX">
-                                            <td>{{n}}</td>
-                                            <td>{{st}}</td>
-                                            <td>{{sp}}</td>
-                                            <td>{{dr}}</td>
-                                            <td>{{af}}</td>
-                                            <td>{{dt}}</td>
-                                        </tr>
-                                        {% endfor %}
-                                        {% endblock %}
-                                    </tbody>
-                                </table>
-                            </div>
-                            
-                        </div>
+			
+		
+            <div id="page-inner"> 
+              <div class="row">
+                <div class="col-md-4 col-sm-4">
+                  <div class="card teal darken-1">
+                      <div class="card-content white-text">
+                        <span class="card-title">Name</span>
+                        <p>{{data.name}}</p>
+                      </div>
                     </div>
-                    <!--End Advanced Tables -->
+                </div>
+                <div class="col-md-4 col-sm-4">
+                  <div class="card teal">
+                    <div class="card-content white-text">
+                      <span class="card-title">Time</span>
+                      <p>{{ data.date }}</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4 col-sm-4">
+                  <div class="card teal darken-1 ">
+                  <div class="card-content white-text">
+                    <span class="card-title">Duration</span>
+                    <p>{{data.duration}}</p>
+                  </div>
+                </div>
+                </div>
+
+                <div class="col-md-4 col-sm-4">
+                   <div class="card green darken-1">
+                        <div class="card-content white-text">
+                          <span class="card-title">Chief Complain</span>
+                          <p>{{data.story}}</p>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                   <div class="card red darken-3">
+                        <div class="card-content">
+                          <span class="card-title">Symptoms</span>
+                          <p>{{data.symptom}}</p>
+                        </div>
+                      </div>
+                </div>
+            
+            <div class="col-md-4 col-sm-4">
+                <div class="card blue darken-2">
+                <div class="card-content white-text">
+                  <span class="card-title">Aggravating Factors</span>
+                  <p>{{ data.aggrv }}</p>
+                </div>
                 </div>
             </div>
-    </div>
-             <!-- /. PAGE INNER  -->
+            <!-- /. PAGE WRAPPER  -->
             </div>
-         <!-- /. PAGE WRAPPER  -->
+            </div>
+            </div>
+            </div>
+
      <!-- /. WRAPPER  -->
     <!-- JS Scripts-->
- 
-
     <!-- jQuery Js -->
     <script src="{% static 'assets/js/jquery-1.10.2.js' %}"></script>
 	
@@ -127,13 +137,17 @@
 	
     <!-- Custom Js -->
     <script src="{% static 'assets/js/custom-scripts.js' %}"></script> 
-        <script>
-            $(document).ready(function () {
-                $('#dataTables-example').dataTable();
-            });
-    </script>
-    <!-- Custom Js -->
-    <script src="{% static 'assets/js/custom-scripts.js' %}"></script> 
+	<script>
+	$(document).ready(function(){
+	 $('ul.tabs').tabs();
+		$('.collapsible').collapsible({
+		  accordion: false, // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+		  onOpen: function(el) { alert('Open'); }, // Callback for Collapsible open
+		  onClose: function(el) { alert('Closed'); } // Callback for Collapsible close
+		}
+	  );
+	});
+	</script>
  
 
 </body>
