@@ -2,15 +2,6 @@
 
 ## Investigation, Medication and Chief complaint recognition from text area box
 
-## Team Details
-- Team Name
-  - **Something**
-- Team Members
-  - **Rahul Soni**
-  - **Rupen Chitroda**
-- College
-  - **Institue of Technology, Nirma University, Ahmedabad.**
-
 ### Problem Definition
 To develop a solution, the first step is to understand the problem. Develop an NLP module to identify the keywords related to a patient's investigation, medication and chief complaint from a free text in the text box. Highlight the extracted content and feed them as input in EMR’s Chief complaint, Investigation and Medication module.
 
@@ -38,3 +29,14 @@ To develop a solution, the first step is to understand the problem. Develop an N
 - same for cell below that, which will perform execution over 5000 entries  having title 'main extractor'
 - execute below that to see output of new entries in dataframe
 - on any issue contact me or mail me (7984675687) (rahuldsoni2001@gmail.com)
+### College Details
+Institute of Technology, Nirma University, Ahmedabad 
+### Requirements
+Django : so it is easy to use web service for all platform. You can also make API for using views.py file
+no other libraries are used, we can used nlp for few purpose but that will reduce speed and we found few patterns which were easy to track so code in working with it.
+we can use diseases stored in dictionary and refere that for checking but we found pattern in sentences whivh was using word like having and since whivh kind of reduces size to make comaprision.
+but sure user can add their requirement by very minor modifications
+
+### Team Details
+- Rahul Soni
+- Rupen Chitroda
