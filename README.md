@@ -38,8 +38,7 @@ To develop a solution, the first step is to understand the problem. Develop an N
 - same for cell below that, which will perform execution over 5000 entries  having title 'main extractor'
 - execute below that to see output of new entries in dataframe
 - on any issue contact me or mail me (7984675687) (rahuldsoni2001@gmail.com)
-### College Details
-Institute of Technology, Nirma University, Ahmedabad 
+
 ### Requirements
 Django : so it is easy to use web service for all platform. You can also make API for using views.py file
 no other libraries are used, we can used nlp for few purpose but that will reduce speed and we found few patterns which were easy to track so code in working with it.
