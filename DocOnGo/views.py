@@ -49,7 +49,7 @@ def detailsfunc(name, email, str):
         for i in range(len(txts)):
             if txts[i].lower() in ("have","having","feel","feeling"):
                 si = i
-            if txts[i] == "since":
+            if txts[i] == "since" or txts[i] == "from":
                 sii = i
                 z=1
                 break 
