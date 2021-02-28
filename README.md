@@ -1,6 +1,6 @@
 # MINeD Hackathon 2021
 
-### Investigation, Medication and Chief complaint recognition from text area box
+## Investigation, Medication and Chief complaint recognition from text area box
 
 ### Problem Definition
 To develop a solution, the first step is to understand the problem. Develop an NLP module to identify the keywords related to a patient's investigation, medication and chief complaint from a free text in the text box. Highlight the extracted content and feed them as input in EMR’s Chief complaint, Investigation and Medication module.
@@ -11,3 +11,12 @@ To develop a solution, the first step is to understand the problem. Develop an N
 - Also with other details like name and date, it is stored in ‘.csv’ file for doctor’s reference.
 - Patient itself can view brief about their report.
 - Doctor can view all details of patient in table format on their side.
+
+### Steps to Execute
+
+### College Detail
+Institute of Technology, Nirma University, Ahmedabad 
+
+### Team Detail
+- Rahul Soni
+- Rupen Chitroda
