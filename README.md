@@ -14,9 +14,9 @@ To develop a solution, the first step is to understand the problem. Develop an N
 
 ### Steps to Execute
 
-### College Detail
+### College Details
 Institute of Technology, Nirma University, Ahmedabad 
 
-### Team Detail
+### Team Details
 - Rahul Soni
 - Rupen Chitroda
