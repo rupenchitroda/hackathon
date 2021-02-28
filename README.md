@@ -41,6 +41,4 @@ To develop a solution, the first step is to understand the problem. Develop an N
 
 ### Requirements
 Django : so it is easy to use web service for all platform. You can also make API for using views.py file
-no other libraries are used, we can used nlp for few purpose but that will reduce speed and we found few patterns which were easy to track so code in working with it.
-we can use diseases stored in dictionary and refere that for checking but we found pattern in sentences whivh was using word like having and since whivh kind of reduces size to make comaprision.
-but sure user can add their requirement by very minor modifications
+
