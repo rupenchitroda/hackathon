@@ -1,1 +1,3 @@
-# MINeD
+# MINeD Hackathon 2021
+
+## 
