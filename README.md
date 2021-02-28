@@ -5,6 +5,15 @@
 ### Problem Definition
 To develop a solution, the first step is to understand the problem. Develop an NLP module to identify the keywords related to a patient's investigation, medication and chief complaint from a free text in the text box. Highlight the extracted content and feed them as input in EMR’s Chief complaint, Investigation and Medication module.
 
+## Team Details
+- Team Name
+  - **Something**
+- Team Members
+  - ***Rahul Soni***
+  - ***Rupen Chitroda*** 
+- College
+  - Institue of Technology, Nirma University, Ahmedabad.
+
 ### Flow of Code
 - As patient submits the story, whole description goes to views.py file in backend.
 - Here necessary parts of sentence are extracted and stored in dictionary object.
@@ -36,7 +45,3 @@ Django : so it is easy to use web service for all platform. You can also make AP
 no other libraries are used, we can used nlp for few purpose but that will reduce speed and we found few patterns which were easy to track so code in working with it.
 we can use diseases stored in dictionary and refere that for checking but we found pattern in sentences whivh was using word like having and since whivh kind of reduces size to make comaprision.
 but sure user can add their requirement by very minor modifications
-
-### Team Details
-- Rahul Soni
-- Rupen Chitroda
